@@ -1,7 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+
 import SignInOutStyles from '../../shared/SignInOutStyles';
 import { Form, InputContainer } from '../../shared/InputStyles';
 import { ButtonStyle } from '../../shared/ButtonsStyles';
+
+import ForwardIcon from '@material-ui/icons/Forward';
 
 function SignIn() {
     return (
@@ -16,8 +20,12 @@ function SignIn() {
                     <label for='password'>Senha</label>
                 </InputContainer>
             </Form>
-            <ButtonStyle solid={true}>Acessar</ButtonStyle>
-            <ButtonStyle solid={false}>Cadastre-se</ButtonStyle>
+            <ButtonStyle solid={true}>Acessar <ForwardIcon /></ButtonStyle>
+            <ButtonStyle solid={false}>
+                <Link to='signup'>
+                    Cadastre-se <ForwardIcon />
+                </Link>
+            </ButtonStyle>
         </SignInOutStyles>
     )
 }

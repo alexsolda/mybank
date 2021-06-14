@@ -1,4 +1,15 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+
+const animateContent = keyframes`
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+        }
+`
 
 export const ContainerBackground = styled.div`
     min-height: 100vh;
@@ -28,6 +39,7 @@ export const Content = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
+    animation: ${animateContent} .6s ease-in;
 `
 
 export const Logo = styled.img`
