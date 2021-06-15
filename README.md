@@ -1,15 +1,15 @@
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/alexsolda/mybank-app">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/alexsolda/mybank">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/alexsolda/mybank-app">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/alexsolda/mybank">
   
-  <a href="https://github.com/alexsolda/mybank-app/commits/developing">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/alexsolda/mybank-app">
+  <a href="https://github.com/alexsolda/mybank/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/alexsolda/mybank">
   </a>
     
    
-   <a href="https://github.com/alexsolda/mybank-app/blob/developing/LICENSE">
-	<img alt="License" src="https://img.shields.io/github/license/alexsolda/mybank-app">
+   <a href="https://github.com/alexsolda/mybank/blob/master/LICENSE">
+	<img alt="License" src="https://img.shields.io/github/license/alexsolda/mybank">
   </a>
 
   <a href="https://www.linkedin.com/in/alexsolda/">
@@ -43,7 +43,7 @@ Projeto pessoal desenvolvido para agregar em meu portifólio.
 
 - [x] Cadastro simplificado.
 - [x] Criar diversas contas. 
-- [x] Adicinionar e remover valores.
+- [x] Adicionar e remover valores.
 - [ ] Consultar histórico de transações (em construção).
 
 ---
@@ -65,7 +65,7 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 # Clone este repositório
 ```bash
-git clone git@github.com:alexsolda/mybank-app.git
+git clone git@github.com:alexsolda/mybank.git
 ```
 
 # Crie um arquivo .env.local com as seguintes chaves:
@@ -107,6 +107,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ####  [React](https://reactjs.org/) 
 
 -   **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
+-   **[Redux](https://react-redux.js.org/)**
 -   **[Context API](https://pt-br.reactjs.org/docs/context.html)**
 -   **[styled-components](https://styled-components.com/)**
 -   **[Material UI Icons](https://material-ui.com/pt/components/material-icons//)**
