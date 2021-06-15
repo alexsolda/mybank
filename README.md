@@ -6,7 +6,7 @@
   <a href="https://github.com/alexsolda/mybank/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/alexsolda/mybank">
   </a>
-    
+   
    
    <a href="https://github.com/alexsolda/mybank/blob/master/LICENSE">
 	<img alt="License" src="https://img.shields.io/github/license/alexsolda/mybank">
