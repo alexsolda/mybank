@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const ContainerGreetings = styled.div`
     color: #001D40;
 

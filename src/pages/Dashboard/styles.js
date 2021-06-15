@@ -1,4 +1,27 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+
+
+const animateMenu = keyframes`
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+        }
+`
+
+const animateMain = keyframes`
+     from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+        }
+`
 
 export const Container = styled.div`
     min-height: 100vh;
@@ -21,6 +44,8 @@ export const MenuContainer = styled.div`
     justify-content: center;
 
     cursor: pointer;
+
+    animation: ${animateMenu} .6s ease-in;
 
 `
 
@@ -58,6 +83,8 @@ export const MainContainer = styled.div`
     flex-direction: column;
 
     padding: 40px 40px; 
+
+    animation: ${animateMain} .6s ease-in;
 `
 
 export const Header = styled.div`

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import SignInOutStyles from '../../shared/SignInOutStyles';
 import { Form, InputContainer } from '../../shared/InputStyles';
-import {ForgotPassword} from './styles';
+import { ForgotPassword } from './styles';
 import { ButtonStyle } from '../../shared/ButtonsStyles';
 
 import ForwardIcon from '@material-ui/icons/Forward';
@@ -24,7 +24,11 @@ function SignIn() {
             <ForgotPassword>
                 <Link to='/forgotpassword'>esqueci a senha :(</Link>
             </ForgotPassword>
-            <ButtonStyle solid={true}>Acessar <ForwardIcon /></ButtonStyle>
+            <ButtonStyle solid={true}>
+                <Link to='/'>
+                    Acessar <ForwardIcon />
+                </Link>
+            </ButtonStyle>
             <ButtonStyle solid={false}>
                 <Link to='signup'>
                     Cadastre-se <ForwardIcon />
