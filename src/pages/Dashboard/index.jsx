@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import AccountBalanceWalletRoundedIcon from '@material-ui/icons/AccountBalanceWalletRounded';
@@ -20,7 +20,12 @@ import {
     MainContent
 } from './styles';
 
+import Home from '../../Components/Home';
+
 function Dashboard() {
+
+    const [componentRendered, setComponentRendered] = useState(<Home />)
+
     return (
         <Container>
             <MenuContainer>
@@ -37,7 +42,9 @@ function Dashboard() {
                         <SettingButtons><ExitToAppRoundedIcon /></SettingButtons>
                     </Settings>
                 </Header>
-                <MainContent></MainContent>
+                <MainContent>
+                    {componentRendered}
+                </MainContent>
             </MainContainer>
         </Container>
     )
