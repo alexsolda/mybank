@@ -20,4 +20,8 @@ export const ContainerContent = styled.div`
 
     padding: 10px 20px;
     margin-bottom: 20px;
+
+    @media(max-width: 1035px){
+        flex-direction: column;
+    }
 `

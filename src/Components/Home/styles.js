@@ -10,6 +10,11 @@ export const ContainerGreetings = styled.div`
     padding: 20px 0;
 
     flex: 2;
+
+    @media(max-width: 1035px){
+        text-align: center;
+        margin-bottom: 20px;
+    }
 `
 
 export const ContentGreetings = styled.h3`
@@ -44,7 +49,7 @@ export const DataInfo = styled.div`
 
     color: #FFF;
 
-    background-color: ${({bgColor}) => bgColor};
+    background-color: ${({ bgColor }) => bgColor};
 
     margin-left: 10px;
 `
@@ -55,4 +60,66 @@ export const DataTitle = styled.h4`
 
 export const DataValue = styled.span`
     font-weight: 500;
+`
+
+export const ContainerOptions = styled.div`
+    display: flex;      
+    flex: 1;
+
+    @media(max-width: 719px){
+       flex-direction: column;
+       
+       align-items: center;
+       justify-content: center;
+    }
+`
+
+export const ContentOption = styled.div`
+    background-color: #FFF;
+
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 0px 15px 3px rgba(0, 29, 64, 0.1);
+
+    width: 100%;
+
+    &:nth-child(-n+2) {
+       margin-right: 40px;
+    }
+
+    @media(max-width: 930px){
+        &:nth-child(-n+2) {
+            margin-right: 20px;
+    }
+    }
+
+    @media(max-width: 719px){
+       flex-direction: column;
+
+       width: 80%;
+
+       &:nth-child(-n+2) {
+       margin-bottom: 20px;
+       margin-right: 0;
+    }
+    }
+`
+
+export const OptionTitle = styled.div`
+    background-color: ${({bgColor}) => bgColor};
+
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    padding-left: 10px;
+
+    color: #FFF;
+
+    display: flex;
+    align-items: flex-end;
+
+    height: 70px;
+
+    font-size: 25px;
+
 `

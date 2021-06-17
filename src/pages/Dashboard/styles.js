@@ -47,6 +47,23 @@ export const MenuContainer = styled.div`
 
     animation: ${animateMenu} .6s ease-in;
 
+    @media(max-width: 1180px){
+        width: 130px;
+    }
+
+    @media(max-width: 987px){
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        width: 100%;
+        height: 100px;
+
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
 `
 
 export const MenuItem = styled.div`

@@ -7,10 +7,13 @@ import {
     ContainerData,
     DataInfo,
     DataTitle,
-    DataValue
+    DataValue,
+    ContainerOptions,
+    ContentOption,
+    OptionTitle
 } from './styles';
 
-import {Title, ContainerContent} from '../../shared/ComponentsStyles';
+import { Title, ContainerContent } from '../../shared/ComponentsStyles';
 
 function Home() {
     return (
@@ -36,9 +39,22 @@ function Home() {
                         <DataTitle>Saídas</DataTitle>
                         <DataValue>R$7,00</DataValue>
                     </DataInfo>
-
                 </ContainerData>
             </ContainerContent>
+
+            <ContainerOptions>
+                <ContentOption>
+                    <OptionTitle bgColor='#00ACEE'>Criar conta</OptionTitle>
+                </ContentOption>
+
+                <ContentOption>
+                    <OptionTitle bgColor='#BDECB6'>Depositar</OptionTitle>
+                </ContentOption>
+
+                <ContentOption>
+                <OptionTitle bgColor='#FF6961'>Sacar</OptionTitle>
+                </ContentOption>
+            </ContainerOptions>
         </>
     )
 }
