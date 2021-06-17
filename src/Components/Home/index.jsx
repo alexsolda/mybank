@@ -10,7 +10,9 @@ import {
     DataValue,
     ContainerOptions,
     ContentOption,
-    OptionTitle
+    OptionTitle,
+    FormContainer,
+    InputOption
 } from './styles';
 
 import { Title, ContainerContent } from '../../shared/ComponentsStyles';
@@ -45,16 +47,30 @@ function Home() {
             <ContainerOptions>
                 <ContentOption>
                     <OptionTitle bgColor='#00ACEE'>Criar conta</OptionTitle>
+                    <FormContainer>
+                        <label>Título</label>
+                        <InputOption bgColor='#D2EFFF'/>
+                    </FormContainer>
                 </ContentOption>
 
                 <ContentOption>
                     <OptionTitle bgColor='#BDECB6'>Depositar</OptionTitle>
+                    <FormContainer>
+                        <label>Valor</label>
+                        <InputOption bgColor='#D5F7D0'/>
+                    </FormContainer>
                 </ContentOption>
 
                 <ContentOption>
-                <OptionTitle bgColor='#FF6961'>Sacar</OptionTitle>
+                    <OptionTitle bgColor='#FF6961'>Sacar</OptionTitle>
+                    <FormContainer>
+                        <label>Valor</label>
+                        <InputOption bgColor='#FFA5A0'/>
+                    </FormContainer>
                 </ContentOption>
             </ContainerOptions>
+
+
         </>
     )
 }

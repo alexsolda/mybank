@@ -75,6 +75,9 @@ export const ContainerOptions = styled.div`
 `
 
 export const ContentOption = styled.div`
+    display: flex;
+    flex-direction: column;
+
     background-color: #FFF;
 
     border-top-left-radius: 20px;
@@ -82,6 +85,7 @@ export const ContentOption = styled.div`
     box-shadow: 0px 0px 15px 3px rgba(0, 29, 64, 0.1);
 
     width: 100%;
+    height: 400px;
 
     &:nth-child(-n+2) {
        margin-right: 40px;
@@ -98,8 +102,12 @@ export const ContentOption = styled.div`
 
        width: 80%;
 
+       &:last-child {
+        margin-bottom: 80px;
+       }
+
        &:nth-child(-n+2) {
-       margin-bottom: 20px;
+        margin-bottom: 20px;
        margin-right: 0;
     }
     }
@@ -122,4 +130,31 @@ export const OptionTitle = styled.div`
 
     font-size: 25px;
 
+`
+
+export const FormContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    padding: 20px 10px;
+
+    label {
+        color: #001D40;
+    }
+`
+
+export const InputOption = styled.input`
+    border-radius: 10px;
+    border: none;
+
+    outline: none;
+
+    background-color: ${({bgColor}) => bgColor};
+
+    height: 40px;
+
+    padding: 0 10px;
+
+    font-size: 15px;
 `
