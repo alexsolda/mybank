@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {
     ContainerGreetings,
@@ -12,12 +12,26 @@ import {
     ContentOption,
     OptionTitle,
     FormContainer,
-    InputOption
+    InputOption,
+    ColorsContainer,
+    ColorPicker,
+    ArrowControl
 } from './styles';
 
+import ColorOption from '../../shared/ColorOption';
+
+import KeyboardArrowLeftRoundedIcon from '@material-ui/icons/KeyboardArrowLeftRounded';
+import KeyboardArrowRightRoundedIcon from '@material-ui/icons/KeyboardArrowRightRounded';
 import { Title, ContainerContent } from '../../shared/ComponentsStyles';
 
 function Home() {
+
+    const [dinamicWidth, setDinamicWidth] = useState(100);
+
+    const handleLeftArrow = () => {};
+
+    const handleRightArrow = () => {};
+
     return (
         <>
             <Title>Home</Title>
@@ -49,7 +63,31 @@ function Home() {
                     <OptionTitle bgColor='#00ACEE'>Criar conta</OptionTitle>
                     <FormContainer>
                         <label>Título</label>
-                        <InputOption bgColor='#D2EFFF'/>
+                        <InputOption bgColor='#D2EFFF' />
+
+                        <ColorsContainer>
+                            <label>Personalizar:</label>
+                            <ArrowControl position='left' scroll={dinamicWidth} onClick={handleLeftArrow}><KeyboardArrowLeftRoundedIcon /></ArrowControl>
+                            <ArrowControl position='right' onClick={handleRightArrow}><KeyboardArrowRightRoundedIcon /></ArrowControl>
+                            <ColorPicker width='607'>
+                                <ColorOption bgColor='DBB6EC'></ColorOption>
+                                <ColorOption bgColor='DBB6EC'></ColorOption>
+                                <ColorOption bgColor='DBB6EC'></ColorOption>
+                                <ColorOption bgColor='DBB6EC'></ColorOption>
+                                <ColorOption bgColor='DBB6EC'></ColorOption>
+                                <ColorOption bgColor='DBB6EC'></ColorOption>
+                                <ColorOption bgColor='DBB6EC'></ColorOption>
+                                <ColorOption bgColor='DBB6EC'></ColorOption>
+                                <ColorOption bgColor='DBB6EC'></ColorOption>
+                                <ColorOption bgColor='DBB6EC'></ColorOption>
+                                <ColorOption bgColor='DBB6EC'></ColorOption>
+                                <ColorOption bgColor='DBB6EC'></ColorOption>
+                                <ColorOption bgColor='DBB6EC'></ColorOption>
+                                <ColorOption bgColor='DBB6EC'></ColorOption>
+                                <ColorOption bgColor='DBB6EC'></ColorOption>
+                                <ColorOption bgColor='DBB6EC'></ColorOption>
+                            </ColorPicker>
+                        </ColorsContainer>
                     </FormContainer>
                 </ContentOption>
 
@@ -57,7 +95,7 @@ function Home() {
                     <OptionTitle bgColor='#BDECB6'>Depositar</OptionTitle>
                     <FormContainer>
                         <label>Valor</label>
-                        <InputOption bgColor='#D5F7D0'/>
+                        <InputOption bgColor='#D5F7D0' />
                     </FormContainer>
                 </ContentOption>
 
@@ -65,12 +103,10 @@ function Home() {
                     <OptionTitle bgColor='#FF6961'>Sacar</OptionTitle>
                     <FormContainer>
                         <label>Valor</label>
-                        <InputOption bgColor='#FFA5A0'/>
+                        <InputOption bgColor='#FFA5A0' />
                     </FormContainer>
                 </ContentOption>
             </ContainerOptions>
-
-
         </>
     )
 }

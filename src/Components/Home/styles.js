@@ -85,6 +85,7 @@ export const ContentOption = styled.div`
     box-shadow: 0px 0px 15px 3px rgba(0, 29, 64, 0.1);
 
     width: 100%;
+    max-width: 504px;
     height: 400px;
 
     &:nth-child(-n+2) {
@@ -114,7 +115,7 @@ export const ContentOption = styled.div`
 `
 
 export const OptionTitle = styled.div`
-    background-color: ${({bgColor}) => bgColor};
+    background-color: ${({ bgColor }) => bgColor};
 
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -141,6 +142,7 @@ export const FormContainer = styled.div`
 
     label {
         color: #001D40;
+        font-size: 18px;
     }
 `
 
@@ -150,11 +152,64 @@ export const InputOption = styled.input`
 
     outline: none;
 
-    background-color: ${({bgColor}) => bgColor};
+    background-color: ${({ bgColor }) => bgColor};
 
     height: 40px;
 
     padding: 0 10px;
 
     font-size: 15px;
+`
+
+export const ColorsContainer = styled.div`
+    position: relative;
+
+    width: 100%;
+    max-width: 504px;
+
+    margin: 40px 0;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    label {
+        color: #001D40;
+        font-size: 18px; 
+    }
+`
+
+export const ColorPicker = styled.div`
+    width: ${({width}) => width}px;
+    margin-left: ${({scroll}) => scroll}px;
+`
+
+export const ArrowControl = styled.div`
+    position: absolute;
+
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+
+    left: ${({position}) => position === 'left' ? 0 : '' };
+    right: ${({position}) => position === 'right' ? 0 : '' };
+
+    z-index: 9;
+
+    background-color: #00ACEE;
+
+    cursor: pointer;
+
+    border-radius: 5px;
+
+    &:hover {
+        svg {
+            transform: translateY(-2px);
+        }
+    }
+
+    svg {
+        font-size: 30px;
+        color: #FFF;
+        transition: all ease .6s;
+    }
 `
