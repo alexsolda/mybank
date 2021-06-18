@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 
 import {
     ContainerGreetings,
@@ -26,11 +26,29 @@ import { Title, ContainerContent } from '../../shared/ComponentsStyles';
 
 function Home() {
 
-    const [dinamicWidth, setDinamicWidth] = useState(100);
+    const [dinamicWidth, setDinamicWidth] = useState(40);
+    const colorPicker = useRef();
 
-    const handleLeftArrow = () => {};
+    const handleLeftArrow = () => {
+        let x = dinamicWidth + 50;
+        if(x > 0) {
+            x = 40;
+        }
+        setDinamicWidth(x);
+        console.log(x)
+    };
 
-    const handleRightArrow = () => {};
+    const handleRightArrow = () => {
+        let x = dinamicWidth - 50;
+        let colorPickerWidth = 16 * 37;
+
+        if(x < (colorPickerWidth - 850)) {
+            return
+        }
+
+        setDinamicWidth(x)
+
+    };
 
     return (
         <>
@@ -67,9 +85,9 @@ function Home() {
 
                         <ColorsContainer>
                             <label>Personalizar:</label>
-                            <ArrowControl position='left' scroll={dinamicWidth} onClick={handleLeftArrow}><KeyboardArrowLeftRoundedIcon /></ArrowControl>
+                            <ArrowControl position='left' onClick={handleLeftArrow}><KeyboardArrowLeftRoundedIcon /></ArrowControl>
                             <ArrowControl position='right' onClick={handleRightArrow}><KeyboardArrowRightRoundedIcon /></ArrowControl>
-                            <ColorPicker width='607'>
+                            <ColorPicker ref={colorPicker} scroll={dinamicWidth} width='607'>
                                 <ColorOption bgColor='DBB6EC'></ColorOption>
                                 <ColorOption bgColor='DBB6EC'></ColorOption>
                                 <ColorOption bgColor='DBB6EC'></ColorOption>

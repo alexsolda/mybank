@@ -181,6 +181,8 @@ export const ColorsContainer = styled.div`
 export const ColorPicker = styled.div`
     width: ${({width}) => width}px;
     margin-left: ${({scroll}) => scroll}px;
+
+    transition: all ease .6s;
 `
 
 export const ArrowControl = styled.div`
