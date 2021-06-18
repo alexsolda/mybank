@@ -15,13 +15,19 @@ import {
     InputOption,
     ColorsContainer,
     ColorPicker,
-    ArrowControl
+    ArrowControl,
+    ButtonOptions
 } from './styles';
 
 import ColorOption from '../../shared/ColorOption';
 
 import KeyboardArrowLeftRoundedIcon from '@material-ui/icons/KeyboardArrowLeftRounded';
 import KeyboardArrowRightRoundedIcon from '@material-ui/icons/KeyboardArrowRightRounded';
+import PlaylistAddIcon from '@material-ui/icons/PlaylistAdd';
+import AddBoxIcon from '@material-ui/icons/AddBox';
+import IndeterminateCheckBoxIcon from '@material-ui/icons/IndeterminateCheckBox';
+
+
 import { Title, ContainerContent } from '../../shared/ComponentsStyles';
 
 function Home() {
@@ -42,7 +48,7 @@ function Home() {
         let x = dinamicWidth - 50;
         let colorPickerWidth = 16 * 37;
 
-        if(x < (colorPickerWidth - 850)) {
+        if(x < (colorPickerWidth - 950)) {
             return
         }
 
@@ -107,22 +113,29 @@ function Home() {
                             </ColorPicker>
                         </ColorsContainer>
                     </FormContainer>
+                    <ButtonOptions bgColor='#00ACEE'>Criar <PlaylistAddIcon /></ButtonOptions>
                 </ContentOption>
 
                 <ContentOption>
-                    <OptionTitle bgColor='#BDECB6'>Depositar</OptionTitle>
+                    <OptionTitle bgColor='#BDECB6'>Deposito</OptionTitle>
                     <FormContainer>
                         <label>Valor</label>
                         <InputOption bgColor='#D5F7D0' />
+                        <label>Descrição:</label>
+                        <InputOption bgColor='#D5F7D0' />
                     </FormContainer>
+                    <ButtonOptions bgColor='#BDECB6'>Depositar <AddBoxIcon /></ButtonOptions>
                 </ContentOption>
 
                 <ContentOption>
-                    <OptionTitle bgColor='#FF6961'>Sacar</OptionTitle>
+                    <OptionTitle bgColor='#FF6961'>Saque</OptionTitle>
                     <FormContainer>
                         <label>Valor</label>
                         <InputOption bgColor='#FFA5A0' />
+                        <label>Descrição:</label>
+                        <InputOption bgColor='#FFA5A0' />
                     </FormContainer>
+                    <ButtonOptions bgColor='#FF6961'>Sacar <IndeterminateCheckBoxIcon /></ButtonOptions>
                 </ContentOption>
             </ContainerOptions>
         </>

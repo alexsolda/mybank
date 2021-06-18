@@ -65,8 +65,9 @@ export const DataValue = styled.span`
 export const ContainerOptions = styled.div`
     display: flex;      
     flex: 1;
+    justify-content: center;
 
-    @media(max-width: 719px){
+    @media(max-width: 910px){
        flex-direction: column;
        
        align-items: center;
@@ -84,33 +85,30 @@ export const ContentOption = styled.div`
     border-bottom-right-radius: 20px;
     box-shadow: 0px 0px 15px 3px rgba(0, 29, 64, 0.1);
 
-    width: 100%;
-    max-width: 504px;
+    width: 400px;
     height: 400px;
 
     &:nth-child(-n+2) {
        margin-right: 40px;
     }
 
-    @media(max-width: 930px){
+    @media(max-width: 1470px){
+       width: 260px;
+    }
+
+    @media(max-width: 910px){
+        width: 400px;
         &:nth-child(-n+2) {
-            margin-right: 20px;
+            margin-right: 0;
+            margin-bottom: 20px;
+    }
+    &:last-child {
+        margin-bottom: 100px;
     }
     }
 
-    @media(max-width: 719px){
-       flex-direction: column;
-
-       width: 80%;
-
-       &:last-child {
-        margin-bottom: 80px;
-       }
-
-       &:nth-child(-n+2) {
-        margin-bottom: 20px;
-       margin-right: 0;
-    }
+    @media(max-width: 889px){
+       
     }
 `
 
@@ -159,13 +157,12 @@ export const InputOption = styled.input`
     padding: 0 10px;
 
     font-size: 15px;
+
+    margin-bottom: 15px;
 `
 
 export const ColorsContainer = styled.div`
     position: relative;
-
-    width: 100%;
-    max-width: 504px;
 
     margin: 40px 0;
 
@@ -212,6 +209,38 @@ export const ArrowControl = styled.div`
     svg {
         font-size: 30px;
         color: #FFF;
+        transition: all ease .6s;
+    }
+`
+
+export const ButtonOptions = styled.button`
+    background-color: ${({bgColor}) => bgColor};
+
+    color: #FFF;
+
+    padding: 10px 0;
+
+    font-size: 25px;
+    font-weight: 300;
+
+    border: none;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        svg {     
+        transform: rotate(360deg)
+        }
+    }
+
+    svg {
+        margin-left: 10px;
         transition: all ease .6s;
     }
 `
