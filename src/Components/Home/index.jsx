@@ -1,4 +1,10 @@
-import React, {useState, useRef} from 'react';
+import React, { useState, useRef } from 'react';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper.min.css";
+import "swiper/components/pagination/pagination.min.css";
+import SwiperCore, {
+    Pagination
+} from 'swiper/core';
 
 import {
     ContainerGreetings,
@@ -14,47 +20,21 @@ import {
     FormContainer,
     InputOption,
     ColorsContainer,
-    ColorPicker,
-    ArrowControl,
+    ArrowInfo,
     ButtonOptions
 } from './styles';
 
 import ColorOption from '../../shared/ColorOption';
 
-import KeyboardArrowLeftRoundedIcon from '@material-ui/icons/KeyboardArrowLeftRounded';
-import KeyboardArrowRightRoundedIcon from '@material-ui/icons/KeyboardArrowRightRounded';
 import PlaylistAddIcon from '@material-ui/icons/PlaylistAdd';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 import IndeterminateCheckBoxIcon from '@material-ui/icons/IndeterminateCheckBox';
+import SettingsEthernetIcon from '@material-ui/icons/SettingsEthernet';
 
 
 import { Title, ContainerContent } from '../../shared/ComponentsStyles';
 
 function Home() {
-
-    const [dinamicWidth, setDinamicWidth] = useState(40);
-    const colorPicker = useRef();
-
-    const handleLeftArrow = () => {
-        let x = dinamicWidth + 50;
-        if(x > 0) {
-            x = 40;
-        }
-        setDinamicWidth(x);
-        console.log(x)
-    };
-
-    const handleRightArrow = () => {
-        let x = dinamicWidth - 50;
-        let colorPickerWidth = 16 * 37;
-
-        if(x < (colorPickerWidth - 950)) {
-            return
-        }
-
-        setDinamicWidth(x)
-
-    };
 
     return (
         <>
@@ -91,26 +71,48 @@ function Home() {
 
                         <ColorsContainer>
                             <label>Personalizar:</label>
-                            <ArrowControl position='left' onClick={handleLeftArrow}><KeyboardArrowLeftRoundedIcon /></ArrowControl>
-                            <ArrowControl position='right' onClick={handleRightArrow}><KeyboardArrowRightRoundedIcon /></ArrowControl>
-                            <ColorPicker ref={colorPicker} scroll={dinamicWidth} width='607'>
-                                <ColorOption bgColor='DBB6EC'></ColorOption>
-                                <ColorOption bgColor='DBB6EC'></ColorOption>
-                                <ColorOption bgColor='DBB6EC'></ColorOption>
-                                <ColorOption bgColor='DBB6EC'></ColorOption>
-                                <ColorOption bgColor='DBB6EC'></ColorOption>
-                                <ColorOption bgColor='DBB6EC'></ColorOption>
-                                <ColorOption bgColor='DBB6EC'></ColorOption>
-                                <ColorOption bgColor='DBB6EC'></ColorOption>
-                                <ColorOption bgColor='DBB6EC'></ColorOption>
-                                <ColorOption bgColor='DBB6EC'></ColorOption>
-                                <ColorOption bgColor='DBB6EC'></ColorOption>
-                                <ColorOption bgColor='DBB6EC'></ColorOption>
-                                <ColorOption bgColor='DBB6EC'></ColorOption>
-                                <ColorOption bgColor='DBB6EC'></ColorOption>
-                                <ColorOption bgColor='DBB6EC'></ColorOption>
-                                <ColorOption bgColor='DBB6EC'></ColorOption>
-                            </ColorPicker>
+                            <Swiper spaceBetween={30} >
+                                <SwiperSlide>
+                                    <ColorOption bgColor='DBB6EC'></ColorOption>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <ColorOption bgColor='DBB6EC'></ColorOption>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <ColorOption bgColor='DBB6EC'></ColorOption>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <ColorOption bgColor='DBB6EC'></ColorOption>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <ColorOption bgColor='DBB6EC'></ColorOption>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <ColorOption bgColor='DBB6EC'></ColorOption>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <ColorOption bgColor='DBB6EC'></ColorOption>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <ColorOption bgColor='DBB6EC'></ColorOption>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <ColorOption bgColor='DBB6EC'></ColorOption>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <ColorOption bgColor='DBB6EC'></ColorOption>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <ColorOption bgColor='DBB6EC'></ColorOption>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <ColorOption bgColor='DBB5FA'></ColorOption>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <ColorOption bgColor='DBB6EC'></ColorOption>
+                                </SwiperSlide>
+                            </Swiper>
+                            <ArrowInfo><SettingsEthernetIcon /></ArrowInfo>
                         </ColorsContainer>
                     </FormContainer>
                     <ButtonOptions bgColor='#00ACEE'>Criar <PlaylistAddIcon /></ButtonOptions>
@@ -134,6 +136,7 @@ function Home() {
                         <InputOption bgColor='#FFA5A0' />
                         <label>Descrição:</label>
                         <InputOption bgColor='#FFA5A0' />
+                        
                     </FormContainer>
                     <ButtonOptions bgColor='#FF6961'>Sacar <IndeterminateCheckBoxIcon /></ButtonOptions>
                 </ContentOption>

@@ -1,4 +1,13 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+
+const animateArrowInfo = keyframes`
+    from {
+        transform: translateX(20px);
+    }
+    to {
+        transform: translateX(-40px);
+    }
+`
 
 
 export const ContainerGreetings = styled.div`
@@ -182,34 +191,15 @@ export const ColorPicker = styled.div`
     transition: all ease .6s;
 `
 
-export const ArrowControl = styled.div`
-    position: absolute;
-
+export const ArrowInfo = styled.div`
     display: flex;
-    justify-content: center;    
     align-items: center;
+    justify-content: center;
 
-    left: ${({position}) => position === 'left' ? 0 : '' };
-    right: ${({position}) => position === 'right' ? 0 : '' };
-
-    z-index: 9;
-
-    background-color: #00ACEE;
-
-    cursor: pointer;
-
-    border-radius: 5px;
-
-    &:hover {
-        svg {
-            transform: translateY(-2px);
-        }
-    }
+    color: rgba(0,0,0,.4);
 
     svg {
-        font-size: 30px;
-        color: #FFF;
-        transition: all ease .6s;
+        animation: ${animateArrowInfo} .8s linear .6s infinite alternate;
     }
 `
 
