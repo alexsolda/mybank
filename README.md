@@ -42,8 +42,8 @@ Projeto pessoal desenvolvido para agregar em meu portifólio.
 ## ⚙️ Funcionalidades
 
 - [x] Cadastro simplificado.
-- [x] Criar diversas contas. 
-- [x] Adicionar e remover valores.
+- [ ] Criar diversas contas. 
+- [ ] Adicionar e remover valores.
 - [ ] Consultar histórico de transações (em construção).
 
 ---
@@ -104,13 +104,12 @@ npm run start
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-####  [React](https://reactjs.org/) 
-
+-   **[React](https://reactjs.org/) **
 -   **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
--   **[Redux](https://react-redux.js.org/)**
 -   **[Context API](https://pt-br.reactjs.org/docs/context.html)**
 -   **[styled-components](https://styled-components.com/)**
 -   **[Material UI Icons](https://material-ui.com/pt/components/material-icons//)**
+-   **[Firebase](https://firebase.google.com/?hl=pt)**
 
 ---
 
